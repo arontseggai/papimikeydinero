@@ -7,7 +7,7 @@
       :title="project.title"
       :url="project.url"
       :photo="project.photo"
-      :photoHover="project.photoHover"></ProjectComponent>
+      :videoHost="project.videoHost"></ProjectComponent>
   </div>
 </template>
 
@@ -24,27 +24,33 @@
       }
     },
     methods: {
+      checkVideoHost(url) {
+        return 'vimeo';
+      },
       callGoogleDriveSheet(){
         let that = this
-        const url = `https://sheets.googleapis.com/v4/spreadsheets/${process.env.googleSheetId}/values/a2:e?key=${process.env.googleApiKey}`
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${process.env.googleSheetId}/values/a2:c?key=${process.env.googleApiKey}`
         fetch(url)
         .then(function(response){
           return response.json();
         })
         .then(function(response) {
-          let projects_array = response.values;
+          let projects_array = response.values;          
           let array = []
 
           projects_array.forEach( function ( value, i ) {
+            let videoHost = that.checkVideoHost(value[1]);
+            console.log(videoHost);
             let project = {
               id: `project-${i}`,
               title: value[0],
               url: value[1],
               photo: value[2],
-              photoHover: value[3]
+              videoHost: videoHost
             }
-            array.push(project)
+            array.push(project);
           });
+          console.log(array);
           that.projects = array
         })
         .catch(function(error) {

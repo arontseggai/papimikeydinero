@@ -27,11 +27,11 @@
         <ProjectsComponent></ProjectsComponent>
       </section>
 
-      <hr>
+      <!-- <hr> -->
 
-      <section id="footer">
+      <!-- <section id="footer">
         <FooterComponent></FooterComponent>
-      </section>
+      </section> -->
   </div>
       <section id="bottom-footer">
           <BottomFooterComponent></BottomFooterComponent>

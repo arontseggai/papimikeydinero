@@ -2,12 +2,16 @@
   <div v-cloak class="column is-6" @keydown.esc="deactiveOverlay">
     <div class="imagery" @click="activateOverlay">
       <img :src="photo" alt="">
-      <img class="hover" :src="photoHover" alt="">
+      <!-- <img class="hover" :src="photoHover" alt=""> -->
     </div>
     <div class="overlay" :class="{active: isActive}" @click="deactiveOverlay">
       <img class="close" src="~/static/close.svg" alt="" @click="deactiveOverlay">
-      <div class="video" :data-vimeo-url="url" :data-vimeo-width="1000" :id="id"></div>
-    </div>
+      <div
+        :if="videoHost === 'vimeo'"
+        class="video"
+        :data-vimeo-url="url"
+        :data-vimeo-width="1000" 
+        :id="id"></div>
   </div>
 </template>
 
@@ -84,10 +88,14 @@
         type: String,
         required: true
       },
-      photoHover: {
+      videoHost: {
         type: String,
-        required: true
-      }                  
+        required: true        
+      }
+      // photoHover: {
+      //   type: String,
+      //   required: true
+      // }                  
     },
     data() {
       return {
