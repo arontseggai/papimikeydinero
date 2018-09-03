@@ -7,10 +7,15 @@
     <div class="overlay" :class="{active: isActive}" @click="deactiveOverlay">
       <img class="close" src="~/static/close.svg" alt="" @click="deactiveOverlay">
       <div
-        :if="videoHost === 'vimeo'"
+        v-if="videoHost === 'vimeo'"
         class="video" :data-vimeo-url="url"
         :data-vimeo-width="1000" 
         :id="id"></div>
+      <div v-else-if="videoHost === 'youtube'" class="video">
+        <iframe width="420" height="315"
+        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+        </iframe>
+        </div>        
     </div>
   </div>
 </template>
@@ -69,6 +74,8 @@
 
 <script>
   import Player from '@vimeo/player'
+  // import VueYouTubeEmbed from 'vue-youtube-embed'
+
   export default {
     props: {
       id: {

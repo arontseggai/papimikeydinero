@@ -14,11 +14,13 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "nuxt": "npm:nuxt-edge",
+    "vue-youtube-embed": "^2.2.1"
   },
   "devDependencies": {
     "@vimeo/player": "^2.6.1",
     "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.7.0",
     "bulma": "^0.7.1",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",

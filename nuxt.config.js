@@ -37,6 +37,9 @@ module.exports = {
     googleSheetId: '1QZSlrDz6uievtRcxZ3ZArfeSTWVzgZXScs-TzFHZE-s',
     googleApiKey: 'AIzaSyCxBN5zBVOjgLJB6CK9ZznB19KDEzXcBXU',
   },
+  plugins: [
+    '~/plugins/youtube'
+  ],
   /*
   ** Add css
   */
@@ -49,12 +52,14 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: [],
+    transpile: [
+      'vue-youtube-embed'
+    ],
     /*
     ** Run ESLint on save
     */
-    extend (config, { isDev, isClient }) {
-      if (isDev && isClient) {
+    extend (config, { isDev }) {
+      if (isDev && process.client) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
