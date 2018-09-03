@@ -26,7 +26,7 @@
     methods: {
       callGoogleDriveSheet(){
         let that = this
-        const url = "https://sheets.googleapis.com/v4/spreadsheets/1Diou_hAp98SrWHyq1f0cywRj9BsnUJy6SX34qLva8m0/values/a2:e?key=AIzaSyCxBN5zBVOjgLJB6CK9ZznB19KDEzXcBXU"
+        const url = `https://sheets.googleapis.com/v4/spreadsheets/${process.env.googleSheetId}/values/a2:e?key=${process.env.googleApiKey}`
         fetch(url)
         .then(function(response){
           return response.json();

@@ -33,6 +33,10 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  env: {
+    googleSheetId: '1QZSlrDz6uievtRcxZ3ZArfeSTWVzgZXScs-TzFHZE-s',
+    googleApiKey: 'AIzaSyCxBN5zBVOjgLJB6CK9ZznB19KDEzXcBXU',
+  },
   /*
   ** Add css
   */
