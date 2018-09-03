@@ -25,7 +25,13 @@
     },
     methods: {
       checkVideoHost(url) {
-        return 'vimeo';
+        if(url.includes('vimeo')) {
+          return 'vimeo';
+        } else if (url.includes('youtube')) {
+          return 'youtube';
+        } else {
+          return null;
+        }
       },
       callGoogleDriveSheet(){
         let that = this
@@ -40,7 +46,6 @@
 
           projects_array.forEach( function ( value, i ) {
             let videoHost = that.checkVideoHost(value[1]);
-            console.log(videoHost);
             let project = {
               id: `project-${i}`,
               title: value[0],
@@ -50,7 +55,6 @@
             }
             array.push(project);
           });
-          console.log(array);
           that.projects = array
         })
         .catch(function(error) {

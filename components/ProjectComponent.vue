@@ -8,15 +8,14 @@
       <img class="close" src="~/static/close.svg" alt="" @click="deactiveOverlay">
       <div
         :if="videoHost === 'vimeo'"
-        class="video"
-        :data-vimeo-url="url"
+        class="video" :data-vimeo-url="url"
         :data-vimeo-width="1000" 
         :id="id"></div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-
   [v-cloak] {
     display: none;
   }
@@ -90,7 +89,7 @@
       },
       videoHost: {
         type: String,
-        required: true        
+        required: true
       }
       // photoHover: {
       //   type: String,
@@ -109,12 +108,16 @@
       },
       deactiveOverlay() {
         this.isActive = false
-        this.player.pause()
+        if(this.videoHost === 'vimeo') {
+          this.player.pause()
+        }
       },
       deactiveOverlayEscape(e) {
         if (e.keyCode === 27 && this.isActive) {
           this.isActive = false;
-          this.player.pause()
+          if(this.videoHost === 'vimeo') {
+            this.player.pause()
+          }
         }
       }
     },
@@ -122,7 +125,9 @@
       window.addEventListener('keyup', this.deactiveOverlayEscape);
     },
     mounted() {
-      this.player = new Player(this.id)
+      if(this.videoHost === 'vimeo') {
+        this.player = new Player(this.id)
+      }            
     }
   }
 </script>
