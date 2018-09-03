@@ -12,9 +12,13 @@
         :data-vimeo-width="1000" 
         :id="id"></div>
       <div v-else-if="videoHost === 'youtube'" class="video">
-        <iframe width="420" height="315"
-        src="https://www.youtube.com/embed/tgbNymZ7vqY">
-        </iframe>
+        <no-ssr placeholder="Loading...">
+          <youtube
+            :video-id="'TneTu-drouQ'"
+            @ready="ready"
+            player-width="1000"
+            ></youtube>          
+          </no-ssr>
         </div>        
     </div>
   </div>
@@ -74,7 +78,6 @@
 
 <script>
   import Player from '@vimeo/player'
-  // import VueYouTubeEmbed from 'vue-youtube-embed'
 
   export default {
     props: {
@@ -110,6 +113,10 @@
       }
     },
     methods: {
+      ready(event) {
+        console.log(event)
+        this.player = event.player;
+      },
       activateOverlay() {
         this.isActive = true
       },
@@ -118,13 +125,20 @@
         if(this.videoHost === 'vimeo') {
           this.player.pause()
         }
+        if(this.videoHost === 'youtube') {
+          this.player.pause()
+        }
+
       },
       deactiveOverlayEscape(e) {
         if (e.keyCode === 27 && this.isActive) {
           this.isActive = false;
           if(this.videoHost === 'vimeo') {
-            this.player.pause()
+            this.player.pauseVideo()
           }
+          if(this.videoHost === 'youtube') {
+            this.player.pauseVideo()
+          }          
         }
       }
     },
