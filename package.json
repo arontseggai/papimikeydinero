@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "dev": "nuxt",
+    "dev": "NODE_ENV=DEV nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "NODE_ENV=PRODUCTION nuxt generate",

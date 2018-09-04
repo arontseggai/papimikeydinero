@@ -49,7 +49,7 @@ module.exports = {
   ],
   // router: { base: '/papimikeydinero/' },
   router: { 
-    ...(process.env.NODE_ENV !== 'PRODUCTION' ? {base: ''} : {base: '/papimikeydiner/'})
+    ...(process.env.NODE_ENV !== 'PRODUCTION' ? {base: ''} : {base: '/papimikeydinero/'})
    },
   /*
   ** Build configuration
