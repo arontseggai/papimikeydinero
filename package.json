@@ -5,7 +5,7 @@
   "author": "arontseggai <aron.tseggai@gmail.com>",
   "private": true,
   "scripts": {
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "deploy": "push-dir --dir=dist --branch=gh-pages DEPLOY_ENV=GH_PAGES --cleanup",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
