@@ -1,18 +1,14 @@
 <template>
   <div>
     <section id="header">
-      <HeaderComponent></HeaderComponent>
+      <!-- <HeaderComponent></HeaderComponent> -->
     </section>
 
     <div class="container">
 
-      <hr>
-
       <section id="about">
-        <AboutComponent></AboutComponent>
+        <!-- <AboutComponent></AboutComponent> -->
       </section>
-
-      <hr>
 <!--
     <section id="projects-section">
       <div id="projects">
