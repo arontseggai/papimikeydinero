@@ -2,11 +2,17 @@
 
 @media only screen and (max-width: 1215px) {
   iframe { width: 800px; }
+  .youtube-video iframe {
+    height: 450px;
+  }
   #player { width: 800px; }
 }
 
 @media only screen and (max-width: 1023px) {
   iframe { width: 600px; }
+  .youtube-video iframe {
+    height: 337px;
+  }  
   #player { width: 600px; }
     .padding-sides {
     padding: 0px 30px;
@@ -15,6 +21,9 @@
 
 @media only screen and (max-width: 768px) {
   iframe { width: 400px; }
+  .youtube-video iframe {
+    height: 225px;
+  }  
   #player { width: 400px; }
   .padding-sides {
     padding: 0px 10px;
@@ -23,6 +32,9 @@
 
 @media only screen and (max-width: 479px) {
   iframe { width: 300px; }
+  .youtube-video iframe {
+    height: 169px;
+  }  
   #player { width: 300px; }
   .padding-sides {
     padding: 0px 10px;

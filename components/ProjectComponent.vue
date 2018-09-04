@@ -15,11 +15,13 @@
         :data-vimeo-url="url" 
         :data-vimeo-width="1000" 
         :id="id"></div>
-      <no-ssr v-else-if="videoHost === 'youtube'" class="video" placeholder="Loading...">
-        <youtube 
+      <no-ssr v-else-if="videoHost === 'youtube'" class="video youtube-video" placeholder="Loading...">
+        <youtube
           :video-id="url" 
           @ready="ready" 
-          player-width="1000"></youtube>
+          player-width="1000px"
+          player-height="563px"
+          ></youtube>
       </no-ssr>
     </div>
   </div>
