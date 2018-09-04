@@ -49,7 +49,7 @@ module.exports = {
   ],
   // router: { base: '/papimikeydinero/' },
   router: { 
-    ...(process.env.NODE_ENV !== 'GH_PAGES' ? {base: ''} : {base: '/papimikeydinero/'})
+    ...(process.env.NODE_ENV !== 'GH_PAGES' ? {base: ''} : {base: './'})
    },
   /*
   ** Build configuration
