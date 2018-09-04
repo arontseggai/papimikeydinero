@@ -47,7 +47,10 @@ module.exports = {
     'bulma/css/bulma.css',
     "~/assets/css/styles.css"
   ],
-  router: { base: '' },
+  // router: { base: '/papimikeydinero/' },
+  router: { 
+    ...(process.env.NODE_ENV !== 'production' ? {base: ''} : {base: '/papimikeydinero/'})
+   },
   /*
   ** Build configuration
   */
