@@ -13,6 +13,7 @@
 
 <script>
   import ProjectComponent from './ProjectComponent.vue'
+  import { getIdFromURL } from 'vue-youtube-embed'
 
   export default {
     components: {
@@ -46,10 +47,14 @@
 
           projects_array.forEach( function ( value, i ) {
             let videoHost = that.checkVideoHost(value[1]);
+            let id = value[1];
+            if(videoHost === "youtube") {
+              id = getIdFromURL(value[1]);
+            }
             let project = {
               id: `project-${i}`,
               title: value[0],
-              url: value[1],
+              url: id,
               photo: value[2],
               videoHost: videoHost
             }

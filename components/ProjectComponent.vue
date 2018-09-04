@@ -4,22 +4,23 @@
       <img :src="photo" alt="">
       <!-- <img class="hover" :src="photoHover" alt=""> -->
     </div>
-    <div class="overlay" :class="{active: isActive}" @click="deactiveOverlay">
+    <div 
+      class="overlay" 
+      :class="{active: isActive}"
+      @click="deactiveOverlay">
       <img class="close" src="~/static/close.svg" alt="" @click="deactiveOverlay">
-      <div
-        v-if="videoHost === 'vimeo'"
-        class="video" :data-vimeo-url="url"
+      <div 
+        v-if="videoHost === 'vimeo'" 
+        class="video" 
+        :data-vimeo-url="url" 
         :data-vimeo-width="1000" 
         :id="id"></div>
-      <div v-else-if="videoHost === 'youtube'" class="video">
-        <no-ssr placeholder="Loading...">
-          <youtube
-            :video-id="'TneTu-drouQ'"
-            @ready="ready"
-            player-width="1000"
-            ></youtube>          
-          </no-ssr>
-        </div>        
+      <no-ssr v-else-if="videoHost === 'youtube'" class="video" placeholder="Loading...">
+        <youtube 
+          :video-id="url" 
+          @ready="ready" 
+          player-width="1000"></youtube>
+      </no-ssr>
     </div>
   </div>
 </template>
@@ -78,7 +79,6 @@
 
 <script>
   import Player from '@vimeo/player'
-
   export default {
     props: {
       id: {
@@ -114,31 +114,29 @@
     },
     methods: {
       ready(event) {
-        console.log(event)
-        this.player = event.player;
+        this.player = event.target;
       },
       activateOverlay() {
         this.isActive = true
       },
       deactiveOverlay() {
         this.isActive = false
-        if(this.videoHost === 'vimeo') {
+        if (this.videoHost === 'vimeo') {
           this.player.pause()
         }
-        if(this.videoHost === 'youtube') {
-          this.player.pause()
+        if (this.videoHost === 'youtube') {
+          this.player.pauseVideo()
         }
-
       },
       deactiveOverlayEscape(e) {
         if (e.keyCode === 27 && this.isActive) {
           this.isActive = false;
-          if(this.videoHost === 'vimeo') {
+          if (this.videoHost === 'vimeo') {
+            this.player.pause()
+          }
+          if (this.videoHost === 'youtube') {
             this.player.pauseVideo()
           }
-          if(this.videoHost === 'youtube') {
-            this.player.pauseVideo()
-          }          
         }
       }
     },
@@ -146,9 +144,9 @@
       window.addEventListener('keyup', this.deactiveOverlayEscape);
     },
     mounted() {
-      if(this.videoHost === 'vimeo') {
+      if (this.videoHost === 'vimeo') {
         this.player = new Player(this.id)
-      }            
+      }
     }
   }
 </script>
