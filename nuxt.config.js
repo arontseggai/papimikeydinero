@@ -35,7 +35,7 @@ module.exports = {
   loading: { color: '#3B8070' },
   env: {
     googleSheetId: '1QZSlrDz6uievtRcxZ3ZArfeSTWVzgZXScs-TzFHZE-s',
-    googleApiKey: 'AIzaSyCxBN5zBVOjgLJB6CK9ZznB19KDEzXcBXU',
+    googleApiKey: 'AIzaSyAobr7V2p7-68nRO7T_XXC-7OYnH12McMc',
   },
   plugins: [
     '~/plugins/youtube'
