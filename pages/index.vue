@@ -1,23 +1,14 @@
 <template>
   <div>
-    <section id="header">
-      <!-- <HeaderComponent></HeaderComponent> -->
-    </section>
-
     <div class="container">
+
+      <section id="header">
+        <HeaderComponent></HeaderComponent>
+      </section>
 
       <section id="about">
         <!-- <AboutComponent></AboutComponent> -->
       </section>
-<!--
-    <section id="projects-section">
-      <div id="projects">
-        <div class="columns is-multiline">
-          <div class="column is-half-desktop" v-for="project in projects">
-            <div :data-vimeo-url="project.url" data-vimeo-width="550" :id="project.id"></div>
-          </div>
-        </div>
-      </section> -->
 
       <section id="projects">
         <ProjectsComponent></ProjectsComponent>
