@@ -48,6 +48,9 @@
     position: relative;
     cursor: pointer;
   }
+  .imagery img {
+    border: 1px solid #FFCA01;
+  }
   .imagery .hover {
     position: absolute;
     top: 0;

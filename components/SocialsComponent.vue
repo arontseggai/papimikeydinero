@@ -34,13 +34,14 @@
     }
     .socials-list .socials-item img {
         height: 50px;
-
+        -webkit-transition: 200ms; /* Safari */
+        transition: 200ms;        
     }
     .socials-list a {
         border: none;
     }
     .socials-list a:hover img {
-        margin-top: -3px;
+        margin-top: -10px;
     }
 </style>
 

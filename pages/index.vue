@@ -7,7 +7,7 @@
       </section>
 
       <section id="about">
-        <!-- <AboutComponent></AboutComponent> -->
+        <AboutComponent></AboutComponent>
       </section>
 
       <section id="projects">
