@@ -20,20 +20,34 @@
             </p>
             <div class="sub-content-block">
                 <p>Voor zijn Latin georiënteerde debuutplaat H.E.C.T.O.R.</p>
-                <ul>
-                    <li>(Hazlenut</li>
-                    <li>Eye</li>
-                    <li>Chulo</li>
-                    <li>Trap</li>
-                    <li>Oriented</li>
-                    <li>Revolutionairy)</li>
+                <ul class="details-list">
+                    <li>
+                        <p>(Hazlenut</p>
+                    </li>
+                    <li>
+                        <p>Eye</p>
+                    </li>
+                    <li>
+                        <p>Chulo</p>
+                    </li>
+                    <li>
+                        <p>Trap</p>
+                    </li>
+                    <li>
+                        <p>Oriented</p>
+                    </li>
+                    <li>
+                        <p>Revolutionairy)</p>
+                    </li>
                 </ul>
-                <div class="block left">
-                    <img src="" alt="">
-                </div>
-                <div class="block right">
-                    <p>werkte hij samen met onder andere DJ Jean en de Jeugd Van Tegenwoording.</p>
-                    <p>Als iemand aan je vraagt of de aankomende vijf zomers van Mikey Dinero zijn, antwoord je met 'Si Papi'.</p>
+                <div class="blocks-container">
+                    <div class="block left">
+                        <img src="~/assets/img/Mikey DD-2.jpg" alt="">
+                    </div>
+                    <div class="block right">
+                        <p>werkte hij samen met onder andere DJ Jean en de Jeugd Van Tegenwoording.</p>
+                        <p>Als iemand aan je vraagt of de aankomende vijf zomers van Mikey Dinero zijn, antwoord je met 'Si Papi'.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,7 +64,41 @@
         color: #fff;
         margin-bottom: 30px;
     }
+    .sub-content-block {
+        text-align: right;
+    }
+    .details-list {
+        justify-content: flex-end;
+        display: flex;
+    }
+    .details-list li {
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid #FFCA01
+    }
+    .details-list li p {
+        color: #FECB2F;
+    }
+    .details-list li:last-child {
+        border: none;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+    .blocks-container {
+        display: flex;
+        justify-content: space-between;
+    }
     .block {
-        width: 50%;
+        width: 48%;
+    }
+    .left {
+        margin-top: 30px;
+        margin-bottom: -100px !important;
+    }
+    .left img {
+        border: 3px solid #FFCA01;
+    }
+    .sub-content-block p {
+        color: #fff;
     }
 </style>
