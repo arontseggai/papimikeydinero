@@ -8,7 +8,7 @@
       class="overlay" 
       :class="{active: isActive}"
       @click="deactiveOverlay">
-      <img class="close" src="~/static/close.svg" alt="" @click="deactiveOverlay">
+      <img class="close" src="~/static/cross.svg" alt="" @click="deactiveOverlay">
       <div 
         v-if="videoHost === 'vimeo'" 
         class="video" 
@@ -46,6 +46,7 @@
   }
   .imagery {
     position: relative;
+    cursor: pointer;
   }
   .imagery .hover {
     position: absolute;
@@ -55,9 +56,6 @@
   }
   .imagery:hover .hover {
     opacity: 1;
-  }
-  .imagery {
-    cursor: pointer;
   }
   .overlay.active {
     position: fixed;

@@ -1,5 +1,5 @@
 <template>
-  <div class="columns is-multiline">
+  <div class="columns is-multiline sub-container">
     <ProjectComponent
       v-for="project in projects"
       :key="project.id"

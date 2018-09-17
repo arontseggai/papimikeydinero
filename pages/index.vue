@@ -15,10 +15,13 @@
       </section>
 
       <!-- <hr> -->
+      <section id="socials">
+        <SocialsComponent></SocialsComponent>
+      </section>
 
-      <!-- <section id="footer">
+      <section id="footer">
         <FooterComponent></FooterComponent>
-      </section> -->
+      </section>
   </div>
       <section id="bottom-footer">
           <BottomFooterComponent></BottomFooterComponent>
@@ -29,6 +32,7 @@
 <script>
   import ProjectsComponent from '~/components/ProjectsComponent.vue'
   import FooterComponent from '~/components/FooterComponent.vue'
+  import SocialsComponent from '~/components/SocialsComponent.vue'
   import BottomFooterComponent from '~/components/BottomFooterComponent.vue'
   import AboutComponent from '~/components/AboutComponent.vue'
   import HeaderComponent from '~/components/HeaderComponent.vue'
@@ -37,6 +41,7 @@
     components: {
       ProjectsComponent,
       FooterComponent,
+      SocialsComponent,
       BottomFooterComponent,
       AboutComponent,
       HeaderComponent

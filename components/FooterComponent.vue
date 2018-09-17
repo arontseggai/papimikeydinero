@@ -1,52 +1,19 @@
 <template>
-  <div class="columns is-mobile">
-    <div class="column is-half-mobile text-right">
-      <p>INFO</p>
-      <div class="subcontent">
-        <p>Tel: 0031643248030</p>
-        <p><a href="mailto:info@grygboit.com">Mail</a></p>
-        <p><a href="https://instagram.com/grygierczykboitelle" target="_blank">Instagram</a></p>
-        <p><a href="https://vimeo.com/grygboit" target="_blank">Vimeo</a></p>
-      </div>
-    </div>
-    <div class="column is-half-mobile">
-      <p>CLIENTS</p>
-      <div class="subcontent">
-        <p v-for="(client, index) in clients" :key="index">{{ client }}</p>
-      </div>
-    </div>
+  <div class="sub-container content-centered">
+    <p class="title padded-b-10">Serginho M. Neslo</p>
+    <a class="padded-b-10" href="mailto:papi@mikeydinero.nl">papi@mikeydinero.nl</a>
+    <a href="tel:0031624118802" class="padded-b-10">0624118802</a>
   </div>
 </template>
 
-<script>
-  export default {
-    data() {
-      return {
-        'clients': []
-      }
-    },
-    methods: {
-      callGoogleDriveSheet() {
-        let that = this
-        const url = "https://sheets.googleapis.com/v4/spreadsheets/1rabzNttY9gjlwIwcdV4eUq6C8rkVmYBElEhTBIlIQyg/values/a2:a?key=AIzaSyCxBN5zBVOjgLJB6CK9ZznB19KDEzXcBXU"
-        fetch(url)
-          .then(function(response) {
-            return response.json();
-          })
-          .then(function(response) {
-            let merged = [].concat.apply([], response.values)
-            that.clients = merged
-          })
-          .catch(function(error) {
-            console.log(error);
-          });
-      }
-    },
-    mounted() {
-      this.callGoogleDriveSheet()
-    }
+<style>
+  .sub-container {
+    padding: 40px 0px;
   }
-</script>
-
-
-
+  .content-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+  }
+</style>

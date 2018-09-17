@@ -51,23 +51,36 @@ body {
   background-color: #0A0A0B;
 }
 
+.title {
+  font-size: 24px;
+  color: #FECB2F;
+}
 
-
-p {
+p, a {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-variant: normal;
   font-weight: 600;
   line-height: 20px;
-  color: black;
+  color: #FECB2F;
+}
+a {
+  border-bottom: 1px solid transparent;
+}
+a:hover {
+  color: #FECB2F;
+  border-bottom: 1px solid #FECB2F;;
+}
+.padded-b-10 {
+  margin-bottom: 8px !important;
 }
 
 
 hr {
   margin-top: 40px;
   margin-bottom: 40px;
-  border-top: 2px solid black;
+  border-top: 2px solid #FECB2F;
 }
 
 
@@ -78,7 +91,6 @@ hr {
 #bottom-footer .outer-container {
   display: flex;
   justify-content: center;
-  background-color: black;
   /*  padding: 25px 0px;*/
   z-index: 999;
   width: 100%;
