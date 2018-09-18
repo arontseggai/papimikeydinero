@@ -32,10 +32,16 @@
     margin-bottom: 0px !important;
   }
   .sub-content-block {
-    text-align: center !important;
+    text-align: left !important;
   }
   .details-list {
-    justify-content: center !important;
+    justify-content: left !important;
+  }
+  .socials-list {
+    padding: 0px !important;
+  }
+  h1 {
+    font-size: 38px !important;
   }
 }
 

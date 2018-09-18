@@ -22,7 +22,7 @@
                     </p>
                     <div class="sub-content-block">
                         <p>Voor zijn Latin georiënteerde debuutplaat H.E.C.T.O.R.</p>
-                        <ul class="details-list oblique">
+                        <ul class="details-list oblique is-hidden-mobile">
                             <li>
                                 <p>(Hazlenut</p>
                             </li>
