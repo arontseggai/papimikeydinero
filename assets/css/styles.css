@@ -1,4 +1,6 @@
-
+.columns {
+	margin: 0 !important;
+}
 
 @media only screen and (max-width: 1215px) {
   iframe { width: 800px; }
@@ -42,7 +44,7 @@
   }
   h1 {
     font-size: 38px !important;
-  }
+  } 
 }
 
 @media only screen and (max-width: 479px) {
