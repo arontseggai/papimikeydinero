@@ -28,6 +28,15 @@
   .padding-sides {
     padding: 0px 10px;
   }
+  .left {
+    margin-bottom: 0px !important;
+  }
+  .sub-content-block {
+    text-align: center !important;
+  }
+  .details-list {
+    justify-content: center !important;
+  }
 }
 
 @media only screen and (max-width: 479px) {
@@ -56,12 +65,25 @@ body {
   color: #FECB2F;
 }
 
-p, a {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+h1 {
+  font-size: 64px;
+  font-family: serif;
+}
+h3 {
+  font-family: serif;
+  font-size: 32px;
+}
+h4 {
+  color: #fff;
   font-size: 18px;
-  font-style: oblique;
+  font-weight: 600;
+}
+
+p, a {
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 18px;
+  /* font-style: oblique; */
   font-variant: normal;
-  font-weight: bold;
   line-height: 20px;
   color: #FECB2F;
 }
@@ -94,4 +116,14 @@ hr {
   /*  padding: 25px 0px;*/
   z-index: 999;
   width: 100%;
+}
+
+.sub-container {
+  padding: 80px 0px;
+}
+.content-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
 }
