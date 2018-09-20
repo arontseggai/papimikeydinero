@@ -33,7 +33,7 @@
   }
   .img-overlay {
     position: absolute;
-    opacity: 0.6;
+    opacity: 0.2;
     top: 0;
     z-index: 999;
     background-color: black;
