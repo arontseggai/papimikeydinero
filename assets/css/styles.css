@@ -65,16 +65,17 @@
 }
 
 body {
-  background-color: #0A0A0B;
+  background-color: #000000;
 }
 
 .title {
   font-size: 24px;
+  font-family: serif;
   color: #FECB2F;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 48px;
   font-family: serif;
 }
 h3 {

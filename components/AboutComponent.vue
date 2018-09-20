@@ -4,7 +4,7 @@
             <div class="column is-8 is-offset-2">
                 <div class="content-block">
                     <div class="has-text-centered">
-                        <h1>Papi Mikey Dinero</h1>
+                        <h1>PAPI MIKEY DINERO</h1>
                         <h3>Biografie</h3>
                         <p class="fat white oblique">Volgens de statistieken was hij allang dood of zat 'ie vast.</p>
                         <p class="fat oblique content-paragraph">En het heeft niet veel gescheeld.</p>

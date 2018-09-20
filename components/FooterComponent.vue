@@ -6,5 +6,8 @@
   </div>
 </template>
 
-<style>
+<style scoped>
+  .sub-container {
+    padding-bottom: 160px;
+  }
 </style>

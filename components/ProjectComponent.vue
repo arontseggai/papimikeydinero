@@ -1,5 +1,5 @@
 <template>
-  <div v-cloak class="column is-6" @keydown.esc="deactiveOverlay">
+  <div class="column is-4" @keydown.esc="deactiveOverlay">
     <div class="imagery" @click="activateOverlay">
       <img :src="photo" alt="">
       <!-- <img class="hover" :src="photoHover" alt=""> -->
@@ -49,7 +49,7 @@
     cursor: pointer;
   }
   .imagery img {
-    border: 1px solid #FFCA01;
+    width: 100%;
   }
   .imagery .hover {
     position: absolute;

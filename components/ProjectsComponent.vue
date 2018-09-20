@@ -34,6 +34,9 @@
           return null;
         }
       },
+      getVideoThumbnail(id) {
+        return `https://img.youtube.com/vi/${id}/0.jpg`
+      },
       callGoogleDriveSheet(){
         let that = this
         const url = `https://sheets.googleapis.com/v4/spreadsheets/${process.env.googleSheetId}/values/a2:c?key=${process.env.googleApiKey}`
@@ -48,15 +51,18 @@
           projects_array.forEach( function ( value, i ) {
             let videoHost = that.checkVideoHost(value[1]);
             let id = value[1];
+            let thumbnail = false;
             if(videoHost === "youtube") {
               id = getIdFromURL(value[1]);
+              thumbnail = that.getVideoThumbnail(id);
+              console.log(thumbnail)
             }
             let project = {
               id: `project-${i}`,
               title: value[0],
               url: id,
-              photo: value[2],
-              videoHost: videoHost
+              photo: thumbnail ? thumbnail : value[2],
+              videoHost: videoHost,
             }
             array.push(project);
           });

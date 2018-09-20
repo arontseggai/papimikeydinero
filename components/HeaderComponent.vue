@@ -16,6 +16,6 @@
 
 <style>
     header {
-        padding: 100px 0px;
+        padding: 80px 0px;
     }
 </style>
