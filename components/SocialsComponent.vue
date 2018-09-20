@@ -2,23 +2,23 @@
     <div class="sub-container">
         <ul class="socials-list">
             <li class=" socials-item">
-                <a target="_blank" href="#">
-                    <img src="~/assets/img/FacebookG.png" alt="">
+                <a target="_blank" href="https://www.facebook.com/elpapimikeydinero">
+                    <img src="~/assets/img/FacebookG.png" alt="Facebook social button">
                 </a>
             </li>
             <li class=" socials-item">
-                <a target="_blank" href="#">
-                    <img src="~/assets/img/InstagramG.png" alt="">
+                <a target="_blank" href="https://www.instagram.com/papimikeydinero">
+                    <img src="~/assets/img/InstagramG.png" alt="Instagram social button">
                 </a>
             </li>
             <li class=" socials-item">
-                <a target="_blank" href="#">
-                    <img src="~/assets/img/SpotifyG.png" alt="">
+                <a target="_blank" href="https://open.spotify.com/artist/1ZzkltVaZc6BPQ9tluPtGi?si=z13cUgZsRfizVURJ5RCJzw">
+                    <img src="~/assets/img/SpotifyG.png" alt="Spotify social button">
                 </a>
             </li>
             <li class=" socials-item">
-                <a target="_blank" href="#">
-                    <img src="~/assets/img/YoutubeG.png" alt="">
+                <a target="_blank" href="https://www.youtube.com/backstagebastards">
+                    <img src="~/assets/img/YoutubeG.png" alt="Youtube social button">
                 </a>
             </li>                                    
         </ul>

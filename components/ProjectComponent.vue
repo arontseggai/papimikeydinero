@@ -2,7 +2,7 @@
   <div class="column is-4" @keydown.esc="deactiveOverlay">
     <div class="imagery" @click="activateOverlay">
       <img :src="photo" alt="">
-      <!-- <img class="hover" :src="photoHover" alt=""> -->
+      <div class="img-overlay is-hidden-mobile"></div>
     </div>
     <div 
       class="overlay" 
@@ -31,6 +31,19 @@
   [v-cloak] {
     display: none;
   }
+  .img-overlay {
+    position: absolute;
+    opacity: 0.6;
+    top: 0;
+    z-index: 999;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    transition: 400ms;
+  }
+  .img-overlay:hover {
+    opacity: 0;
+  }
   .overlay .close {
     position: absolute;
     right: 0;
@@ -47,18 +60,10 @@
   .imagery {
     position: relative;
     cursor: pointer;
+    text-align: center;
   }
   .imagery img {
     width: 100%;
-  }
-  .imagery .hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-  .imagery:hover .hover {
-    opacity: 1;
   }
   .overlay.active {
     position: fixed;
