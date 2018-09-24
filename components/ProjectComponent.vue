@@ -35,7 +35,7 @@
     position: absolute;
     opacity: 0.2;
     top: 0;
-    z-index: 999;
+    z-index: 997;
     background-color: black;
     width: 100%;
     height: 100%;
