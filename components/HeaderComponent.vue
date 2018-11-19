@@ -2,8 +2,8 @@
     <header>
         <div class="columns">
             <div class="column is-6 is-offset-3">
-                <figure class="image is-square">
-                    <img class="header-image" src="~/assets/img/mike_single_cover_compressed.png" alt="Header image Mikey Dinero Single Cover">
+                <figure class="image">
+                    <img class="header-image" :src="require(`assets/img/${image}`)" alt="Header image Mikey Dinero Single Cover">
                 </figure>
             </div>
         </div>
@@ -11,7 +11,14 @@
 </template>
 
 <script>
-    export default {}
+  export default {
+    props: {
+      image: {
+        type: String,
+        required: true
+      }
+    }
+  }
 </script>
 
 <style>

@@ -3,11 +3,21 @@
     <div class="container">
 
       <section id="header">
-        <HeaderComponent></HeaderComponent>
+        <HeaderComponent :image="'pmd.png'"></HeaderComponent>
       </section>
+
 
       <section id="about">
         <AboutComponent></AboutComponent>
+      </section>
+
+      <section id="header">
+        <HeaderComponent :image="'single_gucci_loafers.png'"></HeaderComponent>
+      </section>
+
+
+      <section id="header">
+        <HeaderComponent :image="'mike_single_cover_compressed.png'"></HeaderComponent>
       </section>
 
       <section id="projects">
@@ -25,7 +35,7 @@
   </div>
       <section id="bottom-footer">
           <BottomFooterComponent></BottomFooterComponent>
-      </section>  
+      </section>
   </div>
 </template>
 
