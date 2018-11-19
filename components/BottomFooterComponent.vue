@@ -1,7 +1,7 @@
 <template>
     <div class="outer-container has-text-centered">
-        <span class="credits">CODE BY ARON TSEGGAI</span>
-    </div>    
+        <a href="https://arontseggai.com" target="_blank"><span class="credits">CODE BY ARON TSEGGAI</span></a>
+    </div>
 </template>
 
 <style scoped>
@@ -10,6 +10,6 @@
     }
     .credits {
         color: #FECB2F;
-        font-size: 7px; 
+        font-size: 7px;
     }
 </style>
