@@ -44,6 +44,9 @@
   .img-overlay:hover {
     opacity: 0;
   }
+  .overlay {
+    display: none;
+  }  
   .overlay .close {
     position: absolute;
     right: 0;
@@ -77,6 +80,7 @@
     justify-content: center;
     align-items: center;
   }
+
   .overlay .video {
     display: none;
   }
